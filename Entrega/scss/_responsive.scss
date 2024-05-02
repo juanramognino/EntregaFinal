@@ -1,0 +1,250 @@
+    /* Media query para pantallas pequeñas (como teléfonos) */
+    @media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        top: 0px;
+        right: 15px;
+        z-index: 1000;
+    }
+
+    ul {
+        position: fixed;
+        width: 40%;
+        height: 40%;
+        background: #fff;
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+        a {
+        font-size: 20px;
+        }
+    }
+
+    li a {
+        &:hover,
+        &.active {
+        background: none;
+        color: red;
+        }
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    .menu {
+        padding: 10px 0;
+
+        .navbar ul li {
+        line-height: 50px;
+        }
+    }
+
+    .btn-1 {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .btn-home a {
+        margin: 0 5px;
+    }
+
+    .surfcontent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .surfing {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .imgsurf {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .surfing p {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .btnformu {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 200px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.6);
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+        a {
+        font-size: 20px;
+        }
+    }
+
+    li a {
+        &:hover,
+        &.active {
+        background: none;
+        color: red;
+        }
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    .header {
+        padding: 80px 30px 50px 30px;
+        flex-direction: column;
+        align-items: center;
+        min-height: 0vh;
+    }
+
+    .surfcontent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    main {
+        padding: 0 40px;
+    }
+
+    h2,
+    h3 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+
+    .btnformu {
+        width: calc(50% - 20px);
+    }
+    }
+
+    @media (min-width: 1024px) {
+    .surfcontent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    main {
+        padding: 0 60px;
+    }
+
+    h2,
+    h3 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: calc(33.33% - 20px);
+        margin-right: 20px;
+    }
+
+    .btnformu {
+        width: calc(33.33% - 20px);
+    }
+    }

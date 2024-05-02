@@ -1,0 +1,438 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(38, 169, 212, 0.6431372549);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  min-height: 30vh;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+header .menu {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafafa;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.logo {
+  color: #30b7c9;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.menu .navbar ul {
+  margin-right: 20px;
+  float: right;
+}
+.menu .navbar ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.menu .navbar ul li a {
+  color: #30b7c9;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu .navbar li a.active, .menu .navbar li a:hover {
+  background: #fcc46f;
+  transition: 0.5s;
+}
+
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu .navbar ul li a:hover {
+  color: #30b7c9;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #30b7c9;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px 0px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 30px;
+}
+
+h3 {
+  text-align: center;
+  margin: 2px 0px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #30b7c9;
+}
+
+input [type=text],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.btnformu {
+  background-color: #30b7c9;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+footer {
+  padding: 1em 0;
+  border-top: 1px solid black;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Media query para pantallas pequeñas (como teléfonos) */
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    top: 0px;
+    right: 15px;
+    z-index: 1000;
+  }
+  ul {
+    position: fixed;
+    width: 40%;
+    height: 40%;
+    background: #fff;
+    top: 80px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  li a:hover, li a.active {
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
+  .menu {
+    padding: 10px 0;
+  }
+  .menu .navbar ul li {
+    line-height: 50px;
+  }
+  .btn-1 {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .btn-home a {
+    margin: 0 5px;
+  }
+  .surfcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .surfing {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .imgsurf {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+  .surfing p {
+    margin-top: 10px;
+    text-align: center;
+  }
+  main {
+    padding: 0 20px;
+  }
+  h2,
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+  form {
+    max-width: 100%;
+  }
+  label {
+    font-size: 16px;
+  }
+  input[type=text],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .btnformu {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.6);
+    top: 80px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  li a:hover, li a.active {
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
+  .header {
+    padding: 80px 30px 50px 30px;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0vh;
+  }
+  .surfcontent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  main {
+    padding: 0 40px;
+  }
+  h2,
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 18px;
+  }
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+  label {
+    font-size: 18px;
+  }
+  input[type=text],
+  textarea {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  .btnformu {
+    width: calc(50% - 20px);
+  }
+}
+@media (min-width: 1024px) {
+  .surfcontent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  main {
+    padding: 0 60px;
+  }
+  h2,
+  h3 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 20px;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  label {
+    font-size: 20px;
+  }
+  input[type=text],
+  textarea {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+  }
+  .btnformu {
+    width: calc(33.33% - 20px);
+  }
+}
+.h2img {
+  text-align: center;
+}
+
+.videosurf {
+  display: block;
+  margin: auto;
+  padding: 10px 10px;
+}
+
+.surfcontent {
+  margin: 20px;
+  border: 4px solid rgb(0, 255, 242);
+  border-radius: 10px;
+  columns: 3;
+}
+
+.imgsurf {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.surfcontent p {
+  background-color: rgb(75, 182, 224);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=estilo.css.map */
